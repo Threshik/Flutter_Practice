@@ -33,9 +33,9 @@ void main(){
           //   ),
           //   child: Text("Hello"),
           // ),
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
             width: 50,
