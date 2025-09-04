@@ -14,7 +14,7 @@ void main(){
           //color: Colors.blue,
           height: 200,
           width: 200,
-          alignment: Alignment.center,
+          //alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.blue,
@@ -35,6 +35,7 @@ void main(){
           // ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
             width: 50,
