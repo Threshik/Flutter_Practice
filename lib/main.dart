@@ -4,35 +4,6 @@ void main(){
 runApp(secondApp());
 }
 
-// class MainApp extends StatelessWidget{
-
-//   String displayName = "Hello ";
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text("Change Hello to bye"),
-//           centerTitle: false,
-//         ),
-//         body: Column(
-//           children: [
-//             Text(displayName),
-//             MaterialButton(
-//               child: Text("Click"),
-//               color: Colors.lightBlue,
-//               padding: EdgeInsets.all(10),
-              
-//              onPressed: () {
-//               displayName="Bye";
-//              } ,
-//             )
-//           ],
-//         )
-//       ),
-//     );
-//   }
-// }
 
 class secondApp extends StatefulWidget{
   @override
@@ -42,7 +13,7 @@ class secondApp extends StatefulWidget{
 }
 
 class secondAppState extends State<secondApp>{
-   String displayName = "Hello ";
+   List<String> fruits = ["Apple","Mango","Kiwi"];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -51,22 +22,11 @@ class secondAppState extends State<secondApp>{
           title: Text("Change Hello to bye"),
           centerTitle: false,
         ),
-        body: Column(
-          children: [
-            Text(displayName),
-            MaterialButton(
-              child: Text("Click"),
-              color: Colors.lightBlue,
-              padding: EdgeInsets.all(10),
-              
-             onPressed: () {
-              setState(() {
-                displayName="Bye";
-              });
-              
-             } ,
-            )
-          ],
+        body: ListView.builder(
+          itemCount: fruits.length,
+          itemBuilder: (context,index){
+            return Text(fruits[index]);
+          }
         )
       ),
     );
